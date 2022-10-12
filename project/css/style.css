@@ -1,0 +1,23 @@
+@charset "utf-8";
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1920px;
+}
+
+.page_home {
+    background-color: #b8b8b8;
+}
+
+header {
+    width: 93.75vw;
+    height: 3.125vw;
+}
