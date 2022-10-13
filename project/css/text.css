@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    outline: 2px dashed red;
+}
+
+.A_page {
+    max-width: 1920px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    background-color: rgba(136, 136, 136, 0.438);
+}
+
+.logo {
+    width: 150px;
+    height: 50px;
+    background-color: black;
+}
+.nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+
+}
+.tnav {
+    margin: 0 20px;
+    padding: 10px;
+    background-color: black;
+    
+}
+.tnav a {
+    text-decoration: none;
+    color: white;
+}
