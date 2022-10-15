@@ -34,8 +34,16 @@ body * {
 
 header {
     position: relative;
+    /* position: fixed; */
     display: flex;
     background-color: rgba(136, 136, 136, 0.438);
+    /* align-items: center;
+    justify-content: space-between;
+    width: 93.75vw;
+    height: 3.125vw;
+    fixed 중앙정렬
+    transform: translateX(-50%);
+    left: 50%; */
 }
 
 .logo {
