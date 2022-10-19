@@ -145,6 +145,8 @@ header {
     line-height: 20px;
     word-spacing: -2px;
     text-align-last: justify;
+    width: 100%;
+    outline: 2px solid darkblue;
 }
 .intro_list_text1 {
     display: block;
@@ -155,6 +157,11 @@ header {
     display: flex;
     position: relative;
 }
+
+.intro_listtboxs {
+    position: relative;
+    margin-top: 5px;
+}
 .intro_list_tbox_img img {
     /* display: block; */
     width: 220px;
@@ -163,12 +170,20 @@ header {
 .intro_list_text2 {
     display: block;
     text-align: center;
-    width: 17vw;
+    width: 24vw;
     text-align-last: center;
+    padding: 0 5px;
+    box-sizing: border-box;
 }
 .intro_list_tbox1_btmt {
+    width: 100%;
     position: absolute;
     bottom: 0;
     font-size: 12px;
     transform: translateY(100%);
+}
+
+.intro_list_tbox2 {
+    width: 100%;
+    outline: 2px solid darkred;
 }
