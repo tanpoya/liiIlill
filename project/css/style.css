@@ -153,6 +153,7 @@ header {
 
 .intro_list_tbox1-2 {
     display: flex;
+    position: relative;
 }
 .intro_list_tbox_img img {
     /* display: block; */
@@ -163,7 +164,11 @@ header {
     display: block;
     text-align: center;
     width: 17vw;
+    text-align-last: center;
 }
 .intro_list_tbox1_btmt {
-    
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    transform: translateY(100%);
 }
