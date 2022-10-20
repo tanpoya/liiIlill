@@ -27,7 +27,7 @@ header {
     position: fixed;
     align-items: center;
     justify-content: space-between;
-    width: 93.75vw;
+    width: 93.05vw;
     height: 3.125vw;
     /* fixed 중앙정렬 */
     transform: translateX(-50%);
