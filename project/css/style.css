@@ -139,6 +139,7 @@ header {
 .intro_list_box {
     display: flex;
     width: 100%;
+    justify-content: space-between;
 }
 .intro_list_tbox1 {
     font-size: 20px;
@@ -187,4 +188,29 @@ header {
 .intro_list_tbox2 {
     width: 100%;
     outline: 2px solid darkred;
+}
+
+
+.intro_list_tbox2_box {
+    display: flex;
+    /* padding: 0 10px; */
+}
+.intro_list_tbox2_box ul {
+    width: 100%;
+}
+.intro_list_tbox2_box ul li {
+    border-top: 1px solid black;
+}
+.intro_list_tbox2_box ul li:last-child {
+    border-bottom: 1px solid black;
+}
+
+.abox {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.cbox {
+    display: none;
+    overflow: hidden;
 }
