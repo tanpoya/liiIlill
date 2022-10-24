@@ -148,7 +148,7 @@ header {
     word-spacing: -2px;
     text-align-last: justify;
     width: 100%;
-    outline: 2px solid darkblue;
+    /* outline: 2px solid darkblue; */
 }
 .intro_list_text1 {
     display: block;
@@ -185,12 +185,11 @@ header {
     transform: translateY(100%);
 }
 
+/* ul 리스트 박스 */
 .intro_list_tbox2 {
     width: 100%;
-    outline: 2px solid darkred;
+    /* outline: 2px solid darkred; */
 }
-
-
 .intro_list_tbox2_box {
     display: flex;
     /* padding: 0 10px; */
@@ -200,6 +199,8 @@ header {
 }
 .intro_list_tbox2_box ul li {
     border-top: 1px solid black;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 .intro_list_tbox2_box ul li:last-child {
     border-bottom: 1px solid black;
@@ -207,9 +208,26 @@ header {
 
 .abox {
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 15px 0;
 }
+.bbox:first-child {
+    font-weight: bold;
+}
+.bbox {
+    width: 100%;
+}
+.box1 {
+    width: 100%;
+}
+.box2 {
+    flex: 1;
+}
+.box3 {
+    text-align: right;
+}
+
 .cbox {
     display: none;
     overflow: hidden;
