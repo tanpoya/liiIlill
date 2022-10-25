@@ -205,20 +205,25 @@ header {
 .intro_list_tbox2_box ul li:last-child {
     border-bottom: 1px solid black;
 }
-
 .abox {
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 15px 0;
+    overflow: hidden;
 }
 .bbox:first-child {
     font-weight: bold;
 }
 .bbox {
+    position: relative;
+    /* display: none; */
     /* width: 100%; */
     /* div 박스가 총 세개  */
     flex: 1;
+    transition: transform .1s ease-in-out;
+    transform-origin: top;
 }
 .bbox:first-child {
     flex: 2;
@@ -234,6 +239,13 @@ header {
 }
 
 .cbox {
-    display: none;
-    overflow: hidden;
+    /* display: none; */
+    /* position: absolute; */
+    font-size: 2.9vh;
+    /* text-align: center; */
 }
+
+/* 오버시 처리 체크 */
+/* .abox:hover .bbox{
+    transform: translateY(-200%);
+} */
