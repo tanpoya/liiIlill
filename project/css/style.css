@@ -201,6 +201,7 @@ header {
     border-top: 1px solid black;
     cursor: pointer;
     text-transform: uppercase;
+    overflow: hidden;
 }
 .intro_list_tbox2_box ul li:last-child {
     border-bottom: 1px solid black;
@@ -211,19 +212,17 @@ header {
     width: 100%;
     justify-content: space-between;
     padding: 15px 0;
-    overflow: hidden;
 }
 .bbox:first-child {
     font-weight: bold;
 }
 .bbox {
     position: relative;
-    /* display: none; */
     /* width: 100%; */
     /* div 박스가 총 세개  */
     flex: 1;
-    transition: transform .1s ease-in-out;
-    transform-origin: top;
+    transition: .2s ease-out;
+    /* transform-origin: top; */
 }
 .bbox:first-child {
     flex: 2;
@@ -238,14 +237,24 @@ header {
         text-align: right;
 }
 
+.acbox {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: -10px;
+}
 .cbox {
-    /* display: none; */
     /* position: absolute; */
-    font-size: 2.9vh;
-    /* text-align: center; */
+    font-size: 5vh;
+    transition: transform .2s ease-out;
+    overflow: hidden;
+    transform: translateY(100%);
 }
 
 /* 오버시 처리 체크 */
-/* .abox:hover .bbox{
+.abox:hover .bbox {
     transform: translateY(-200%);
-} */
+}
+.abox:hover .cbox {
+    transform: translateY(0);
+}
