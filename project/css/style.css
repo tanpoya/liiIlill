@@ -238,12 +238,26 @@ header {
 }
 
 .acbox {
-    width: 100%;
+    /* width: 100vw; */
     position: absolute;
-    /* overflow: hidden; */
+    /* display: flex; */
+    /* overflow: hidden; */   
 }
 .acbox2 {
     position: relative;
+    display: flex;
+    /* flex: 1; */
+    flex-direction: row;
+    left: 0;
+    flex-wrap: nowrap;
+}
+.acbox2_ani {
+    animation: acani 120s linear infinite;   
+}
+@keyframes acani {
+    to {
+        left: -100%;
+    }
 }
 .cbox {
     /* position: absolute; */
@@ -251,6 +265,7 @@ header {
     transition: transform .2s ease-out;
     overflow: hidden;
     transform: translateY(100%);
+    white-space: nowrap;
 }
 
 /* 오버시 처리 체크 */
