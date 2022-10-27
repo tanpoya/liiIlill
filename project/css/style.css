@@ -259,7 +259,7 @@ header {
     overflow: hidden;
     transform: translateY(100%);
     white-space: nowrap;
-    margin-left: 15px;
+    /* margin-left: 5px; */
 }
 
 .abox:hover .acbox2_ani {
@@ -267,7 +267,8 @@ header {
 }
 @keyframes acani {
     to {
-        left: calc(-50vw - 15px);
+        /* left: calc(-50vw - 5px); */
+        left: -50vw;
     }
 }
 
