@@ -240,8 +240,10 @@ header {
 .acbox {
     width: 100%;
     position: absolute;
-    overflow: hidden;
-    top: -10px;
+    /* overflow: hidden; */
+}
+.acbox2 {
+    position: relative;
 }
 .cbox {
     /* position: absolute; */
@@ -256,5 +258,5 @@ header {
     transform: translateY(-200%);
 }
 .abox:hover .cbox {
-    transform: translateY(0);
+    transform: translateY(-40%);
 }
