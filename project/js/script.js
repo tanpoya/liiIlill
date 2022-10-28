@@ -3,7 +3,8 @@ window.addEventListener("DOMContentLoaded", ()=>{
 
     // console.log(rimg);
 
-    for(i = 0; i > 3; i++) {
+    setInterval(() => {
         
-    }
+    }, 3000);
+
 })
