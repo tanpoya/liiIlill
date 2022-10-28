@@ -288,3 +288,10 @@ header {
 .abox:hover .cbox {
     transform: translateY(-40%);
 }
+
+.abox_img {
+    width: 500px;
+    height: 50px;
+    left: 100px;
+    background-color: orange;
+}
