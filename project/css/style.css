@@ -289,9 +289,10 @@ header {
     transform: translateY(-40%);
 }
 
-.abox_img {
+/* .abox_img {
+    position: absolute;
     width: 500px;
     height: 50px;
     left: 100px;
     background-color: orange;
-}
+} */

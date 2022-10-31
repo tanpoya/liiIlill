@@ -1,6 +1,16 @@
-window.addEventListener("DOMContentLoaded", function(){
+$(()=>{
 
-
+    rimg = document.querySelectorAll(".rimg");
+    
+    
+    $(window).ready(function(){
+        // $(".intro_listtboxs img").fadeOut(1500);
+        
+        
+        
+    });
+    
+    
 });
 
 /*
