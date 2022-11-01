@@ -1,12 +1,10 @@
 $(()=>{
 
-    rimg = document.querySelectorAll(".rimg");
+    const rimg = $(".rimg");
+    const r1 = $("#rimg1");
+    const r2 = $("#rimg2");
+    const r3 = $("#rimg3");
     
-    
-    $(window).ready(function(){
-        // $(".intro_listtboxs img").fadeOut(1500);
-        
-    });
     
     
 });
@@ -15,10 +13,10 @@ $(()=>{
 
 1. intro_list_tbox_img 이미지
 
-1) 대상: index.html 102번째 이미지 3개
+1) 대상: index.html 102번째 이미지 3개 (intro_list_tbox_img .rimg #rimg 1 2 3)
 2) 이벤트: fade in/out
 3) 이벤트시: 세개의 이미지들이 순서대로
-            1.5초 간격으로 보임(무한루프)
+            1.5초 간격으로 사라짐(무한루프)
 
 2. abox_img 처리
 
