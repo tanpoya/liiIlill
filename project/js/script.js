@@ -1,27 +1,17 @@
 $(()=>{
 
     const rimg = $(".rimg");
-    const r1 = $("#rimg1");
-    const r2 = $("#rimg2");
-    const r3 = $("#rimg3");
-    
-    // console.log(rimg);
-    // console.log(rr);
+    console.log(rimg)
 
-    // $(document).ready(function(){
-    //     $(rimg[2]).delay(1500).fadeOut(2000, function(){
-    //         $(rimg[1]).delay(1500).fadeOut(2000, function(){
-    //             $(rimg[0]).delay(1500).fadeOut(2000), $(rimg[2]).delay(1500).fadeIn(2000, function(){
-    //                 $(rimg[2]).delay(1500).fadeOut(2000), $(rimg[1]).delay(1500).fadeIn(2000)
-    //             });
-    //         });
-    //     });
-    // });
 
-    $(window).ready(function() {
-
-                
-
+    $(document).ready(function(){
+        $(rimg[2]).delay(1500).fadeOut(2000, function(){
+            $(rimg[1]).delay(1500).fadeOut(2000, function(){
+                $(rimg[0]).delay(1500).fadeOut(2000), $(rimg[2]).delay(1500).fadeIn(2000, function(){
+                    $(rimg[2]).delay(1500).fadeOut(2000), $(rimg[1]).delay(1500).fadeIn(2000)
+                });
+            });
+        });
     });
 
 
