@@ -6,8 +6,6 @@ $(()=>{
     $(window).ready(function(){
         // $(".intro_listtboxs img").fadeOut(1500);
         
-        
-        
     });
     
     
