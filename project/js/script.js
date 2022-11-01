@@ -1,25 +1,38 @@
-$(()=>{
-
+$(() => {
     const rimg = $(".rimg");
     console.log(rimg);
 
-
-    $(document).ready(function(){
-        $(rimg[2]).delay(1500).fadeOut(2000, function(){
-            $(rimg[1]).delay(1500).fadeOut(2000, function(){
-                $(rimg[0]).delay(1500).fadeOut(2000), $(rimg[2]).delay(1500).fadeIn(2000, function(){
-                    $(rimg[2]).delay(1500).fadeOut(2000), $(rimg[1]).delay(1500).fadeIn(2000)
-                });
+    const fadeImg = () => {
+        console.log("들어옴~!");
+        $(rimg[2])
+            .delay(1500)
+            .fadeOut(2000, function () {
+                $(rimg[1])
+                    .delay(1500)
+                    .fadeOut(2000, function () {
+                        $(rimg[0]).delay(1500).fadeOut(2000),
+                            $(rimg[2])
+                                .delay(1500)
+                                .fadeIn(2000, () =>{ 
+                                    // 기존 style값을 모두 없앰!
+                                    rimg.attr("style","");
+                                    // 자기자신함수 다시호출
+                                    fadeImg();
+                                });
+                    });
             });
-        });
-    });
+    };
 
+<<<<<<< HEAD
     
 
 
 
     
     
+=======
+    fadeImg();
+>>>>>>> 5dcd16ccd250fe12908a5dfcc9f94ffdd377174f
 });
 
 /*
@@ -42,13 +55,6 @@ $(()=>{
 
 */
 
-
-
-
-
-
-
-
 // setInterval(()=> {
 //     $(r3).fadeOut(1500);
 //     $(r3).fadeIn(1500)
@@ -62,12 +68,12 @@ $(()=>{
 //     } else if (i == 1) {
 //         setInterval(()=>{
 //             $(rimg[1]).fadeOut(1500)
-            
-//         }, 3000)   
+
+//         }, 3000)
 //     } else {
 //         setInterval(()=>{
 //             $(rimg[0]).fadeOut(1500)
 //         }, 6000)
 //     }
-    
+
 // }
