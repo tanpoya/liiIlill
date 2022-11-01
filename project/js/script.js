@@ -4,8 +4,49 @@ $(()=>{
     const r1 = $("#rimg1");
     const r2 = $("#rimg2");
     const r3 = $("#rimg3");
+    let rr = rimg.length;
     
+    // console.log(rimg);
+    // console.log(rr);
+
+    $(document).ready(function(){
+        $(rimg[2]).delay(1500).fadeOut(2000, function(){
+            $(rimg[1]).delay(1500).fadeOut(2000, function(){
+                $(rimg[0]).delay(1500).fadeOut(2000), $(rimg[2]).delay(1500).fadeIn(2000, function(){
+                    $(rimg[2]).delay(1500).fadeOut(2000), $(rimg[1]).delay(1500).fadeIn(2000)
+                })
+            } )
+        })
+    })
+
+
+
+
+
+
     
+    // setInterval(()=> {
+    //     $(r3).fadeOut(1500);
+    //     $(r3).fadeIn(1500)
+    // }, 3000)
+
+    // for(let i = 0; i < 3; i++) {
+    //     if(i == 0) {
+    //         setInterval(()=>{
+    //             $(rimg[2]).fadeOut(1500)
+    //         }, 0)
+    //     } else if (i == 1) {
+    //         setInterval(()=>{
+    //             $(rimg[1]).fadeOut(1500)
+                
+    //         }, 3000)   
+    //     } else {
+    //         setInterval(()=>{
+    //             $(rimg[0]).fadeOut(1500)
+    //         }, 6000)
+    //     }
+        
+    // }
     
 });
 
@@ -28,3 +69,10 @@ $(()=>{
 
 
 */
+
+
+
+
+
+
+
