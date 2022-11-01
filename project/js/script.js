@@ -14,10 +14,10 @@ $(()=>{
             $(rimg[1]).delay(1500).fadeOut(2000, function(){
                 $(rimg[0]).delay(1500).fadeOut(2000), $(rimg[2]).delay(1500).fadeIn(2000, function(){
                     $(rimg[2]).delay(1500).fadeOut(2000), $(rimg[1]).delay(1500).fadeIn(2000)
-                })
-            } )
-        })
-    })
+                });
+            });
+        });
+    });
 
 
 
