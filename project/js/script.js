@@ -1,7 +1,7 @@
 $(()=>{
 
     const rimg = $(".rimg");
-    console.log(rimg)
+    console.log(rimg);
 
 
     $(document).ready(function(){
@@ -13,6 +13,8 @@ $(()=>{
             });
         });
     });
+
+    
 
 
 

@@ -200,6 +200,7 @@ header {
     /* outline: 2px solid darkred; */
 }
 .intro_list_tbox2_box {
+    position: relative;
     display: flex;
     /* padding: 0 10px; */
 }
@@ -289,10 +290,10 @@ header {
     transform: translateY(-40%);
 }
 
-/* .abox_img {
+.abox_img {
     position: absolute;
     width: 500px;
-    height: 50px;
-    left: 100px;
+    height: 500px;
     background-color: orange;
-} */
+    z-index: 9999;
+}
