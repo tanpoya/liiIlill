@@ -291,12 +291,26 @@ header {
 }
 
 .abox_img {
+    /* background-color: #fff; */
     position: fixed;
     display: flex;
     top: 0;
-
-    width: 500px;
-    height: 500px;
-    background-color: orange;
+    left: 12.8vh;
+    width: 42.6vw;
+    height: 100%;
     z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+}
+.abox_iimg {
+    position: absolute;
+    width: 31.25vw;
+    height: 70vh;
+    object-fit: contain;
+    transform: translateY(-100vh);
+    transition: transform 0.5s ease-out;
+}
+.intro_list_tbox2:hover .abox_iimg{
+    transform: translateY(0);
 }
