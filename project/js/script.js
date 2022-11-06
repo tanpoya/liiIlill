@@ -34,21 +34,22 @@ $(() => {
         abox 오버시 각 abox에 해당하는 iimg가
         위에서 중간으로 멈췄다가 아웃시 내려감
     */
-   
-    $(abox[0]).mouseover(function() {
-        $(iimg[0]).css({
+for(let i = 0; i < abox.length; i++) {
+    $(abox[i]).mouseover(function() {
+        $(iimg[i]).css({
             transform: "translateY(0)",
             transition: "transform 0.5s ease-out",
         }).removeClass("on");
     });
-    $(abox[0]).mouseout(function() {
-        $(iimg[0]).css({
+    $(abox[i]).mouseout(function() {
+        $(iimg[i]).css({
             transform: "translateY(100vh)",
         }).addClass("on");
-    });
-
-
+    });   
+};
 });
+
+
 
 /*
 
