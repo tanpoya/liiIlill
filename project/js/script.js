@@ -27,6 +27,9 @@ $(() => {
     const abox = $(".abox");
     const iimg = $(".abox_iimg");
 
+    let abc;
+    const abcp = [];
+
     console.log(abox);
     console.log(iimg);
 
@@ -39,17 +42,31 @@ for(let i = 0; i < abox.length; i++) {
         $(iimg[i]).css({
             transform: "translateY(0)",
             transition: "transform 0.5s ease-out",
-        }).removeClass("on");
+        })
+        // iimg.each((idx, ele) => {
+        //     abcp[idx] = $(ele).offset().top;
+        //     console.log("오버시: ", abcp[idx]);
+        // });
     });
     $(abox[i]).mouseout(function() {
         $(iimg[i]).css({
             transform: "translateY(100vh)",
-        }).addClass("on");
-    });   
+            transition: "transform 0.5s ease-in"
+        })
+        // iimg.each((idx, ele) => {
+        //     abcp[idx] = $(ele).offset().top;
+        //     console.log("아웃시: ", abcp[idx]);
+        // });
+    });
 };
-});
 
 
+
+// $(window).scroll(function() {
+//     abc = $(this).scrollTop();
+//     console.log(abc);
+// })
+// https://lpla.tistory.com/157
 
 /*
 
@@ -93,3 +110,4 @@ for(let i = 0; i < abox.length; i++) {
 //     }
 
 // }
+});
