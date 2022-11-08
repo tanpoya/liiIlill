@@ -168,7 +168,7 @@ header {
     position: relative;
     width: 220px;
     height: 260px;
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 }
 .intro_list_tbox_img img {
     /* display: ; */
@@ -176,7 +176,13 @@ header {
     top: 0;
     width: 100%;
     height: 100%;
+    /* opacity: 0; 페이드 인아웃 다른버전 트랜지션도
+    transition: opacity .6s ease-in-out; */
 }
+/* .intro_list_tbox_img img.on {
+    opacity: 1;
+    z-index: 1;
+} */
 
 .intro_list_text2 {
     display: block;
@@ -334,12 +340,21 @@ header {
     flex-direction: column;
     /* width: 50%; */
 }
+.counter_boxR {
+    justify-content: flex-end;
+    text-align: right;
+}
+
 .counter_box_num {
     font-size: 41vw;
     text-align: center;
     /* width: 50%; */
 }
-.counter_boxR {
-    justify-content: flex-end;
-    text-align: right;
+.cbnum {
+    display: none;
+    /* overflow: hidden; */
+    /* opacity: 0; */
+}
+.cbnum.non {
+    display: block;
 }
