@@ -52,7 +52,7 @@ for(let i = 0; i < abox.length; i++) {
         $(iimg[i]).css({
             transform: "translateY(100vh)",
             transition: "transform 0.5s ease-in"
-        })
+        }).addClass("on")
         // iimg.each((idx, ele) => {
         //     abcp[idx] = $(ele).offset().top;
         //     console.log("아웃시: ", abcp[idx]);
