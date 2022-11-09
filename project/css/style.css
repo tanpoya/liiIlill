@@ -317,6 +317,9 @@ header {
     transform: translateY(-100vh);
     /* transition: transform 0.5s ease-out; */
 }
+.on {
+    transform: translateY(-100vh);
+}
 
 
 .counter_box {
