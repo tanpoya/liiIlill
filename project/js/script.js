@@ -94,13 +94,11 @@ for(let i = 0; i < abox.length; i++) {
 let cbnum = $(".cbnum");
 let cbni = [];
 
-cbnum.each(idx)
+
 // 스크롤 위치 확인
 $(window).scroll(function() {
-    abc = $(this).scrollTop();
-    if(abc === 1100) {
-        
-    }
+    scTop = $(this).scrollTop();
+    console.log(scTop);
 })
 // console.log(cbnum)
 
