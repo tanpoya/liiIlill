@@ -54,9 +54,8 @@ $(() => {
 
     // 스크롤 위치변수
     let scTop;
-    let lastSc= 0;
-    const scpos = [];
-    let  scNum = $(".counter_box_num");
+    let lastSc = 0;
+    let scNum = $(".counter_box_num");
     console.log(scNum);
 
     // console.log(abox);
@@ -92,15 +91,92 @@ for(let i = 0; i < abox.length; i++) {
 
 
 let cbnum = $(".cbnum");
-let cbni = [];
+let cnum;
+const scpos = [];
 
+let cbtxtI = $(".counter_boxI .cbtxt");
+let cbtxtR = $(".counter_boxR .cbtxt");
+
+// console.log(cbnum)
 
 // 스크롤 위치 확인
 $(window).scroll(function() {
     scTop = $(this).scrollTop();
     console.log(scTop);
-})
-// console.log(cbnum)
+    
+    // cbtxtI.each((idx, ele)=>{
+        // console.log("순번: ", idx, " ", "요소: ", ele)
+        
+    // .cbnum 하나로 text() 변경만 해서 가능할지도..?
+    if(scTop < 1100) {
+        cbnum.removeClass("non");
+        cbnum.eq(0).addClass("non");
+        
+        cbtxtI.eq(0).addClass("cnon");
+        cbtxtR.eq(0).addClass("cnon");
+    } else if(scTop < 1200) {
+        cbnum.removeClass("non");
+        cbnum.eq(1).addClass("non");
+        
+        cbtxtI.eq(1).addClass("cnon");
+        cbtxtR.eq(1).addClass("cnon");
+    } else if(scTop < 1300) {
+        cbnum.removeClass("non");
+        cbnum.eq(2).addClass("non");
+        
+        cbtxtI.eq(2).addClass("cnon");
+        cbtxtR.eq(2).addClass("cnon");
+    } else if(scTop < 1400) {
+        cbnum.removeClass("non");
+        cbnum.eq(3).addClass("non");
+        
+        cbtxtI.eq(3).addClass("cnon");
+        cbtxtR.eq(3).addClass("cnon");
+    } else if(scTop < 1500) {
+        cbnum.removeClass("non");
+        cbnum.eq(4).addClass("non");
+        
+        cbtxtI.eq(4).addClass("cnon");
+        cbtxtR.eq(4).addClass("cnon");
+    } else if(scTop < 1600) {
+        cbnum.removeClass("non");
+        cbnum.eq(5).addClass("non");
+        
+        cbtxtI.eq(5).addClass("cnon");
+        cbtxtR.eq(5).addClass("cnon");
+    } else if(scTop < 1700) {
+        cbnum.removeClass("non");
+        cbnum.eq(6).addClass("non");
+        
+        cbtxtI.eq(6).addClass("cnon");
+        cbtxtR.eq(6).addClass("cnon");
+    } else if(scTop < 1800) {
+        cbnum.removeClass("non");
+        cbnum.eq(7).addClass("non");
+        
+        cbtxtI.eq(7).addClass("cnon");
+        cbtxtR.eq(7).addClass("cnon");
+    } else if(scTop < 1900) {
+        cbnum.removeClass("non");
+        cbnum.eq(8).addClass("non");
+        
+        cbtxtI.eq(8).addClass("cnon");
+        cbtxtR.eq(8).addClass("cnon");
+    } else if(scTop < 2000) {
+        cbnum.removeClass("non");
+        cbnum.eq(9).addClass("non");
+        
+        cbtxtI.eq(9).addClass("cnon");
+        cbtxtR.eq(9).addClass("cnon");
+    }
+/* }); */ /// each ////
+}); // scroll
+
+cbnum.each((idx, ele) => {
+    // console.log("순번: ", idx, "|", "요소: ", ele);
+    scpos[idx] = $(ele).offset().top;
+});
+console.log(scpos);
 
 
 

@@ -337,7 +337,13 @@ header {
     line-height: 1em;
     text-transform: uppercase;
     /* letter-spacing: -1px; */
+    opacity: 0;
 }
+.cbtxt.cnon{
+    opacity: 1;;
+}
+
+
 .counter_boxI {
     display: flex;
     flex-direction: column;
