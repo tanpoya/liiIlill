@@ -88,14 +88,11 @@ for(let i = 0; i < abox.length; i++) {
     });
 };
 
-
-
 let cbnum = $(".cbnum");
 let cnum;
 const scpos = [];
 
-let cbtxtI = $(".counter_boxI .cbtxt");
-let cbtxtR = $(".counter_boxR .cbtxt");
+let cbir = $(".cbir");
 
 // console.log(cbnum)
 
@@ -111,63 +108,63 @@ $(window).scroll(function() {
     if(scTop < 1100) {
         cbnum.removeClass("non");
         cbnum.eq(0).addClass("non");
-        
-        cbtxtI.eq(0).addClass("cnon");
-        cbtxtR.eq(0).addClass("cnon");
+
+        cbir.removeClass("cbirn");
+        cbir.eq(0).addClass("cbirn");
     } else if(scTop < 1200) {
         cbnum.removeClass("non");
         cbnum.eq(1).addClass("non");
         
-        cbtxtI.eq(1).addClass("cnon");
-        cbtxtR.eq(1).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(1).addClass("cbirn");
     } else if(scTop < 1300) {
         cbnum.removeClass("non");
         cbnum.eq(2).addClass("non");
         
-        cbtxtI.eq(2).addClass("cnon");
-        cbtxtR.eq(2).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(2).addClass("cbirn");
     } else if(scTop < 1400) {
         cbnum.removeClass("non");
         cbnum.eq(3).addClass("non");
         
-        cbtxtI.eq(3).addClass("cnon");
-        cbtxtR.eq(3).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(3).addClass("cbirn");
     } else if(scTop < 1500) {
         cbnum.removeClass("non");
         cbnum.eq(4).addClass("non");
         
-        cbtxtI.eq(4).addClass("cnon");
-        cbtxtR.eq(4).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(4).addClass("cbirn");
     } else if(scTop < 1600) {
         cbnum.removeClass("non");
         cbnum.eq(5).addClass("non");
         
-        cbtxtI.eq(5).addClass("cnon");
-        cbtxtR.eq(5).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(5).addClass("cbirn");
     } else if(scTop < 1700) {
         cbnum.removeClass("non");
         cbnum.eq(6).addClass("non");
         
-        cbtxtI.eq(6).addClass("cnon");
-        cbtxtR.eq(6).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(6).addClass("cbirn");
     } else if(scTop < 1800) {
         cbnum.removeClass("non");
         cbnum.eq(7).addClass("non");
         
-        cbtxtI.eq(7).addClass("cnon");
-        cbtxtR.eq(7).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(7).addClass("cbirn");
     } else if(scTop < 1900) {
         cbnum.removeClass("non");
         cbnum.eq(8).addClass("non");
         
-        cbtxtI.eq(8).addClass("cnon");
-        cbtxtR.eq(8).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(8).addClass("cbirn");
     } else if(scTop < 2000) {
         cbnum.removeClass("non");
         cbnum.eq(9).addClass("non");
         
-        cbtxtI.eq(9).addClass("cnon");
-        cbtxtR.eq(9).addClass("cnon");
+        cbir.removeClass("cbirn");
+        cbir.eq(9).addClass("cbirn");
     }
 /* }); */ /// each ////
 }); // scroll

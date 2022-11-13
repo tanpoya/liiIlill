@@ -337,12 +337,7 @@ header {
     line-height: 1em;
     text-transform: uppercase;
     /* letter-spacing: -1px; */
-    opacity: 0;
 }
-.cbtxt.cnon{
-    opacity: 1;;
-}
-
 
 .counter_boxI {
     display: flex;
@@ -352,6 +347,12 @@ header {
 .counter_boxR {
     justify-content: flex-end;
     text-align: right;
+}
+.cbir {
+    visibility: hidden;
+}
+.cbirn {
+    visibility: visible;
 }
 
 .counter_box_num {
@@ -364,6 +365,6 @@ header {
     /* overflow: hidden; */
     /* opacity: 0; */
 }
-.cbnum.non {
+.non {
     display: block;
 }
