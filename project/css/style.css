@@ -400,14 +400,20 @@ header {
     height: 100px;
     top: 20px;
 }
-.i2b_top img {
-    width: 100px;
-    border-radius: 100%;
-}
+
 .i2b_top span {
     font-size: 22px;
     padding: 10px 40px;
 }
 .i2b_top span:last-child {
     font-size: 18px;
+}
+.i2bimg {
+    display: flex;
+    justify-content: center;
+    top: 100px;
+}
+.i2bimg img {
+    width: 100px;
+    border-radius: 100%;
 }

@@ -1,4 +1,7 @@
 $(() => {
+
+    startSS();
+
     const rimg = $(".rimg");
     // console.log(rimg);
 
