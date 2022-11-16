@@ -395,25 +395,77 @@ header {
 .i2b_top {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100px;
     top: 20px;
 }
 
 .i2b_top span {
+    position: absolute;
     font-size: 22px;
     padding: 10px 40px;
 }
-.i2b_top span:last-child {
+.i2b_top span:first-of-type {
+    left: calc(100% - 93vw);
+    font-weight: bold;
+}
+.i2b_top span:last-of-type {
+    right: calc(100% - 93vw);
     font-size: 18px;
 }
+
 .i2bimg {
     display: flex;
+    position: absolute;
     justify-content: center;
-    top: 100px;
+    /* top: 30px; */
 }
 .i2bimg img {
     width: 100px;
     border-radius: 100%;
 }
+
+.i2b_cb {
+    position: absolute;
+}
+.i2b_cbi {
+    position: relative;
+    display: flex;
+    left: 0;
+}
+.i2b_ifty {
+    
+}
+
+/*
+.acbox {
+    position: absolute;
+}
+.acbox2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    left: 0;
+    flex-wrap: nowrap;
+}
+.cbox {
+    font-size: 5vh;
+    width: 50vw;
+    transition: transform .2s ease-out;
+    overflow: hidden;
+    transform: translateY(100%);
+    white-space: nowrap;
+}
+
+.abox:hover .acbox2_ani {
+    animation: acani 5s linear infinite;   
+}
+@keyframes acani {
+    to {
+        left: calc(-50vw - 5px);
+    }
+}
+*/
