@@ -261,7 +261,7 @@ header {
     /* width: 100vw; */
     position: absolute;
     /* display: flex; */
-    /* overflow: hidden; */  
+    /* overflow: hidden;   */
 }
 .acbox2 {
     position: relative;
@@ -385,6 +385,7 @@ header {
     margin: 7vh 0;
 }
 .i2b {
+    position: relative;
     width: 100%;
     height: calc(100vh - 6.25vw);
     background-color: #fff;
@@ -430,47 +431,13 @@ header {
 
 .i2b_cb {
     position: absolute;
-    display: flex;
+    width: clac(100vw - 115.2px);
 }
-.i2b_cbi {
+.i2btb {
+    display: flex;
     position: relative;
-    display: flex;
-    left: 0;
-    top: 30vh;
-}
-.i2b_ifty {
-    position: absolute;
-    font-size: 5vw;
-    white-space: nowrap;
     overflow: hidden;
 }
-
-/*
-.acbox {
-    position: absolute;
+.i2btxt {
+    
 }
-.acbox2 {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    left: 0;
-    flex-wrap: nowrap;
-}
-.cbox {
-    font-size: 5vh;
-    width: 50vw;
-    transition: transform .2s ease-out;
-    overflow: hidden;
-    transform: translateY(100%);
-    white-space: nowrap;
-}
-
-.abox:hover .acbox2_ani {
-    animation: acani 5s linear infinite;   
-}
-@keyframes acani {
-    to {
-        left: calc(-50vw - 5px);
-    }
-}
-*/
