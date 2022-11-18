@@ -429,15 +429,32 @@ header {
     border-radius: 100%;
 }
 
-.i2b_cb {
-    position: absolute;
-    width: clac(100vw - 115.2px);
-}
 .i2btb {
+    position: absolute;
     display: flex;
-    position: relative;
+    width: calc(100vw - 132.2px);
+    height: 100%;
     overflow: hidden;
 }
 .i2btxt {
+    font-size: 5vw;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* .i2b_cb {
+    position: relative;
+    width: calc(100vw - 132.2px);
+}
+.i2btb {
+    display: flex;
+    position: absolute;    
     
 }
+.i2btxt {
+    position: relative;
+    font-size: 5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    width: calc(100vw - 541px);
+} */
