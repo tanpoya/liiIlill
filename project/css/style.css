@@ -430,7 +430,7 @@ header {
 }
 
 .i2b_cb {
-    /* position: relative; */
+    position: relative;
 }
 .i2btb {
     /* position: absolute; */
