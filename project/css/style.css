@@ -431,18 +431,27 @@ header {
 
 .i2b_cb {
     position: relative;
+    width: 100%;
+    height: calc(100% - 200px);
 }
 .i2btb {
-    /* position: absolute; */
+    position: absolute;
     display: flex;
     width: calc(100vw - 132.2px);
-    height: 100%;
-    overflow: hidden;
+    /* height: 100%; */
+    top: calc(100% - 41vh);
+    left: 0;
 }
 .i2btxt {
+    width: 200vw;
     font-size: 5vw;
     white-space: nowrap;
     /* position: relative; */
+    margin-right: 20px;
+    /* overflow: hidden; */
+}
+.txt-ani {
+    /* animation: acani 5s linear infinite; */
 }
 
 /* .i2b_cb {
