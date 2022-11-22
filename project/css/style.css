@@ -498,10 +498,12 @@ header {
 .sw {
     margin-right: 70px;
 }
+
 .buylink {
-    /* position: relative; */
-    width: 124px;
-    height: 31px;
+    position: relative;
+    width: 184px;
+    height: 52px;
+    z-index: 1;
 }
 .buynow {
     position: absolute;
@@ -511,18 +513,22 @@ header {
     border-radius: 50px;
     transition: width .1s ease-out;
     margin: -30px;
+    z-index: 1;
+    cursor: pointer;
 }
 .buy {
     position: relative;
     display: block;
     color: #fff;
     pointer-events: none;
+    text-align: center;
+    line-height: 52px;
 }
-.buynow:hover {
+.buylink .buynow:hover {
     width: 230px;
 }
 
-.buya {
+/* .buya {
     position: absolute;
     background-color: red;
     width: 184px;
@@ -530,11 +536,16 @@ header {
     text-align: center;
     line-height: 52px;
     border-radius: 100px;
+    transition: width .1s ease-out;
+    cursor: pointer;
 }
 .buyb {
     position: relative;
+    width: 184px;
+    height: 52px;
     pointer-events: none;
+    color: #fff;
 }
 .buya:hover {
     width: 230px;
-}
+} */
