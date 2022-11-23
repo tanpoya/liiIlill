@@ -504,6 +504,7 @@ header {
     width: 184px;
     height: 52px;
     z-index: 1;
+    border-radius: 100px;
 }
 .buynow {
     position: absolute;
@@ -513,7 +514,7 @@ header {
     border-radius: 50px;
     transition: width .1s ease-out;
     margin: -30px;
-    z-index: 1;
+    /* z-index: 1; */
     cursor: pointer;
 }
 .buy {
@@ -523,9 +524,6 @@ header {
     pointer-events: none;
     text-align: center;
     line-height: 52px;
-}
-.buylink .buynow:hover {
-    width: 230px;
 }
 
 /* .buya {
