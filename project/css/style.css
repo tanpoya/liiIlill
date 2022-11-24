@@ -433,15 +433,24 @@ header {
     position: relative;
     width: 100%;
     height: calc(100% - 200px);
+    overflow: hidden;
 }
 .i2btb {
     position: absolute;
     display: flex;
-    width: calc(100vw - 132.2px);
+    width: calc(100vw - 106px);
     /* height: 100%; */
     top: calc(100% - 41vh);
     left: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+}
+.txt-ani {
+    animation: tani 3s linear infinite;
+}
+@keyframes tani {
+    to {
+        /* left:  */
+    }
 }
 .i2btxt {
     width: 200vw;
@@ -449,14 +458,6 @@ header {
     white-space: nowrap;
     /* position: relative; */
     margin-right: 20px;
-}
-.txt-ani {
-    animation: tani 5s linear infinite;
-}
-@keyframes tani {
-    to {
-        /* left: calc(-100vw - 132.2px); */
-    }
 }
 
 /* .i2b_cb {
@@ -479,7 +480,8 @@ header {
 .i2b_bt {
     position: relative;
     display: flex;
-    font-size: 26px;
+    font-size: 1.4vw;
+    /* font-size: 26px; */
     width: 100%;
     height: 100px;
     align-items: center;
@@ -525,6 +527,11 @@ header {
     text-align: center;
     line-height: 52px;
 }
+.buynow:hover {
+    width: 230px;
+}
+
+
 
 /* .buya {
     position: absolute;
