@@ -438,25 +438,23 @@ header {
 .i2btb {
     position: absolute;
     display: flex;
-    width: calc(100vw - 106px);
+    /* width: calc(100vw - 106px); */
+    /* width: 100vw; */
     /* height: 100%; */
     top: calc(100% - 41vh);
-    /* right: 0; */
+    left: 0;
     /* overflow: hidden; */
 }
 .txt-ani {
     animation: tani 3s linear infinite;
 }
 @keyframes tani {
-    0% {
-        transform: translate3d(0, 0 , 0);
-    }
-    100% {
-        transform: translate3d(-100%, 0, 0);
+    to {
+        left: calc(-70vw - 20px);
     }
 }
 .i2btxt {
-    width: 200vw;
+    width: 70vw;
     font-size: 5vw;
     white-space: nowrap;
     /* position: relative; */
