@@ -438,12 +438,8 @@ header {
 .i2btb {
     position: absolute;
     display: flex;
-    /* width: calc(100vw - 106px); */
-    /* width: 100vw; */
-    /* height: 100%; */
     top: calc(100% - 41vh);
     left: 0;
-    /* overflow: hidden; */
 }
 .txt-ani {
     animation: tani 3s linear infinite;
@@ -457,26 +453,8 @@ header {
     width: 70vw;
     font-size: 5vw;
     white-space: nowrap;
-    /* position: relative; */
     margin-right: 20px;
 }
-
-/* .i2b_cb {
-    position: relative;
-    width: calc(100vw - 132.2px);
-}
-.i2btb {
-    display: flex;
-    position: absolute;    
-    
-}
-.i2btxt {
-    position: relative;
-    font-size: 5vw;
-    white-space: nowrap;
-    overflow: hidden;
-    width: calc(100vw - 541px);
-} */
 
 .i2b_bt {
     position: relative;
