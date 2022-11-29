@@ -385,6 +385,7 @@ header {
     margin: 7vh 0;
 }
 .i2b {
+    color: #fff;
     position: relative;
     width: 100%;
     height: calc(100vh - 6.25vw);
@@ -442,18 +443,18 @@ header {
     left: 0;
 }
 .txt-ani {
-    animation: tani 3s linear infinite;
+    animation: tani 7s linear infinite;
 }
 @keyframes tani {
     to {
-        left: calc(-70vw - 20px);
+        left: calc(-70vw - 570px);
     }
 }
 .i2btxt {
     width: 70vw;
-    font-size: 5vw;
+    font-size: 7vw;
     white-space: nowrap;
-    margin-right: 20px;
+    margin-right: 570px;
 }
 
 .i2b_bt {
@@ -515,26 +516,9 @@ header {
     width: 230px;
 }
 
-
-
-/* .buya {
+.i2bimg {
     position: absolute;
-    background-color: red;
-    width: 184px;
-    height: 52px;
-    text-align: center;
-    line-height: 52px;
-    border-radius: 100px;
-    transition: width .1s ease-out;
-    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.buyb {
-    position: relative;
-    width: 184px;
-    height: 52px;
-    pointer-events: none;
-    color: #fff;
-}
-.buya:hover {
-    width: 230px;
-} */
