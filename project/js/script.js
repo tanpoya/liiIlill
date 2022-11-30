@@ -124,6 +124,19 @@ $(() => {
                 // });
             });
         };
+
+        const i2b_cb = $(".i2b_cb");
+        console.log(i2b_cb);
+        const i2bColor = ["white", "red", "pink", "white", "yellow", "white", "mediumspringgreen", "bisque", "white", "white"];
+        let i2bC = 0; 
+
+        i2bColor.forEach((ele, idx) => {
+            // console.log(ele, idx);
+            if(i2bC < i2b_cb.length) {
+                for
+            }
+        })
+
 });
 
 

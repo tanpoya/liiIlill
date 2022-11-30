@@ -536,9 +536,7 @@ header {
     border-radius: inherit;
 }
 
-.a-i2btb {
-    top: 0;
+.i2b_abc {
+    display: flex;
 }
-.c-i2btb {
-    top: 
-}
+
