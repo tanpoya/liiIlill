@@ -536,7 +536,27 @@ header {
     border-radius: inherit;
 }
 
-.i2b_abc {
+.i2btbL {
+    height: 100%;
+    position: absolute;
     display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
+.L-i2btb {
+    position: relative;
+    top: 0;
+}
+.i2btbR {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.R-i2btb {
+    position: relative;
+    top: 0;
+}
