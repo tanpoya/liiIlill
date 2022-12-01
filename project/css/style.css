@@ -454,13 +454,59 @@ header {
     top: calc(100% - 41vh);
     left: 0;
 }
+.i2btb2 {
+    position: absolute;
+    display: flex;
+    top: calc(100% - 41vh);
+    left: calc(-70vw - 570px); /* left와 right는 서로 반대로 설정 */
+}
 .txt-ani {
     animation: tani 7s linear infinite;
+}
+.txt-ani2 {
+    animation: tani2 7s linear infinite;
 }
 @keyframes tani {
     to {
         left: calc(-70vw - 570px);
     }
+}
+@keyframes tani2 {
+    to {
+        left: 0;
+    }
+}
+.i2bimg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.i2btbL {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.L-i2btb {
+    position: relative;
+    top: 0;
+}
+.i2btbR {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.R-i2btb {
+    position: relative;
+    top: 0;
 }
 .i2btxt {
     width: 70vw;
@@ -468,6 +514,12 @@ header {
     white-space: nowrap;
     margin-right: 570px;
 }
+.rev {
+    /* transform: scaleX(-1); */
+}
+
+
+
 
 .i2b_bt {
     position: relative;
@@ -526,37 +578,4 @@ header {
 }
 .buynow:hover{
     width: 230px;
-}
-
-.i2bimg {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: inherit;
-}
-
-.i2btbL {
-    height: 100%;
-    position: absolute;
-    display: flex;
-    top: 0;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.L-i2btb {
-    position: relative;
-    top: 0;
-}
-.i2btbR {
-    height: 100%;
-    position: absolute;
-    display: flex;
-    top: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.R-i2btb {
-    position: relative;
-    top: 0;
 }
