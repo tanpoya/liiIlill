@@ -442,12 +442,26 @@ header {
     border-radius: 100%;
 }
 
+/* 중간 */
 .i2b_cb {
     position: relative;
     width: 100%;
     height: calc(100% - 200px);
     overflow: hidden;
 }
+.watch_box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    /* 중앙설정 */
+    z-index: 999;
+}
+.watch_box img {
+    width: 640px;
+    height: 678px;
+}
+
+/* 글자애니설정 */
 .i2btb {
     position: absolute;
     display: flex;
@@ -484,6 +498,8 @@ header {
     border-radius: inherit;
 }
 .i2bimg .i2blo {
+    position: absolute;
+    top: -25px;
     width: 200px;
     height: 103px;
     scale: 0.5;
@@ -518,9 +534,6 @@ header {
     font-size: 7vw;
     white-space: nowrap;
     margin-right: 570px;
-}
-.rev {
-    /* transform: scaleX(-1); */
 }
 
 
@@ -583,4 +596,24 @@ header {
 }
 .buynow:hover{
     width: 230px;
+}
+
+.i2b4 {
+    background-color: rgb(58, 187, 206);
+}
+.i2b3 {
+    overflow: hidden;
+}
+.i2b_cb3 {
+    position: static;
+}
+.i2bi3 {
+    z-index: 999;
+}
+.i2b9 {
+    background-color: rgb(58, 187, 206);
+    overflow: hidden;
+}
+.i2b_cb9 {
+    position: static;
 }

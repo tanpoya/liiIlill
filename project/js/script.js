@@ -126,16 +126,38 @@ $(() => {
         };
 
         const i2b_cb = $(".i2b_cb");
+        const buynow = $(".buynow");
+        const buy = $(".buy");
+        const edition_sw = $(".edition-sw");
         // console.log(i2b_cb);
-        const i2bColor = ["white", "red", "pink", "white", "yellow", "white", "mediumspringgreen", "bisque", "white", "white"];
+        const i2bColor = ["white", "red", "pink", "white", "yellow", "white", "mediumspringgreen", "bisque", "white", "darkred"];
+        const i2bColor2 = ["black", "white", "black", "darkturquoise", "black", "black", "darkblue", "rgb(212, 141, 183)", "rgb(58, 187, 206)", "white"];
 
         i2bColor.forEach((ele, idx) => {
             // console.log(ele, idx);
             $(i2b_cb[idx]).css({
                 color: `${ele}`
-            })
+            }), // i2b_cb 색변경
+            $(buynow[idx]).css({
+                backgroundColor: `${ele}`
+            }), // buynow css
+            i2bColor2.forEach((e, i) => {
+                $(buy[i]).css({
+                    color: `${e}`
+                })
+            }),
+                $(edition_sw[idx]).css({
+                    color: `${ele}`
+                })
         });
+                    
 });
+
+// i2bColor2.forEach((e, i) => {
+//     $(i2b_cb[i]).css({
+//         color: `${e}`
+//     })
+// })
 
 
 
