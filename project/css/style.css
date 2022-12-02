@@ -483,6 +483,11 @@ header {
     object-fit: cover;
     border-radius: inherit;
 }
+.i2bimg .i2blo {
+    width: 200px;
+    height: 103px;
+    scale: 0.5;
+}
 
 .i2btbL {
     height: 100%;
