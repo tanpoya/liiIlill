@@ -30,7 +30,6 @@ $(() => {
     // console.log(scNum);
     let cbnum = $(".cbnum");
     // let cnum;
-    const scpos = [];
 
     let cbir = $(".cbir");
     // console.log(cbir);
@@ -136,6 +135,9 @@ $(() => {
                 400
             );
             setTimeout(actWheel, 400);
+            // return stopSts = 0;
+        } else if(scTop < tg && stopSts === 1) {
+            stopSts = 0;
         }
 
         /* }); */ /// each ////
@@ -182,7 +184,6 @@ $(() => {
         console.log("휠함수!!!");
         // 멈춤상태
         stopSts = 1;
-        // $("html, body").css({overflow: "hidden"});
         $(".page_home").on("mousewheel wheel", function (e) {
             if(stopSts) e.preventDefault();
 
