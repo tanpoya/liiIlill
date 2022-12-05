@@ -128,10 +128,10 @@ $(() => {
                 },
                 400
             );
-            setTimeout(actWheel, 4000);
-        } /* else if(scTop < tg && stopSts) {
+            setTimeout(actWheel, 400);
+        } else if(scTop < tg && stopSts) {
             stopSts = 0;
-        } */
+        }
 
     }); // scroll
 
@@ -227,7 +227,7 @@ $(() => {
             console.log("셋팅값:", subnum);
 
         }); //// mousewheel /////
-    }
+    } // actWheel //
 }); ////// jQB ///////
 
 
@@ -237,11 +237,6 @@ $(() => {
         마우스 스크롤을 아래로 내렸을시 1로 가는게 아닌
         0으로 감 문제는 서브페이지 번호는 1로 시작
         = 서브페이지번호 + 1로 시작 이거떔에 이상해짐
-
-    -1로 시작하기 (X)
-    
-    
-
     
     2. 처음 if문을 페이지스크롤위치(scTop)가 타켓 위치보다 크고
         멈춤상태값(stopSts)이 0일때로 잡음
