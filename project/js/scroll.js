@@ -26,8 +26,6 @@ $(() => {
 
     // 스크롤 위치변수
     let scTop;
-    let scNum = $(".counter_box_num");
-    // console.log(scNum);
     let cbnum = $(".cbnum");
     // let cnum;
 
@@ -39,12 +37,8 @@ $(() => {
     // 스크롤 위치 확인
     $(window).scroll(function () {
         scTop = $(this).scrollTop();
-        console.log(scTop);
+        // console.log(scTop);
 
-        // cbtxtI.each((idx, ele)=>{
-        // console.log("순번: ", idx, " ", "요소: ", ele)
-
-        // .cbnum 하나로 text() 변경만 해서 가능할지도..?
         if (scTop < 1100) {
             cbnum.removeClass("non");
             cbnum.eq(0).addClass("non");
@@ -134,13 +128,11 @@ $(() => {
                 },
                 400
             );
-            setTimeout(actWheel, 400);
-            // return stopSts = 0;
-        } else if(scTop < tg && stopSts === 1) {
+            setTimeout(actWheel, 4000);
+        } /* else if(scTop < tg && stopSts) {
             stopSts = 0;
-        }
+        } */
 
-        /* }); */ /// each ////
     }); // scroll
 
     // cbnum.each((idx, ele) => {
@@ -168,12 +160,9 @@ $(() => {
     let gap = $(window).height() * 0.07;
 
     // 8. 서브 광스크롤 막기
-    let protSub = 0; //0-허용,1-불허용
-
-    // console.log("스크롤한계값:", limit_sc);
+    // let protSub = 0; //0-허용,1-불허용
 
     let tg = Math.floor($(".tg").offset().top);
-    // let tg = 2800; // if 확인용
     console.log("타겟위치:", tg);
 
     let protSts = 0;
@@ -236,6 +225,31 @@ $(() => {
             } //////// else /// //////////
 
             console.log("셋팅값:", subnum);
+
         }); //// mousewheel /////
     }
 }); ////// jQB ///////
+
+
+
+/* 
+    1. 시작 위치까지 내려왔을때 처음 위치에서
+        마우스 스크롤을 아래로 내렸을시 1로 가는게 아닌
+        0으로 감 문제는 서브페이지 번호는 1로 시작
+        = 서브페이지번호 + 1로 시작 이거떔에 이상해짐
+
+    -1로 시작하기 (X)
+    
+    
+
+    
+    2. 처음 if문을 페이지스크롤위치(scTop)가 타켓 위치보다 크고
+        멈춤상태값(stopSts)이 0일때로 잡음
+        = 마지막 서브페이지에서 나갈때 처음 if문때문에 다시
+            시작될거같음
+    
+    3. 1번 문제 해결시 2번문제처럼 첫 서브페이지에서 나가지 못하고
+    다시 0번으로 돌아갈 수 있음
+
+
+*/
