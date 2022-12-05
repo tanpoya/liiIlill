@@ -341,7 +341,7 @@ header {
     transform: translateY(-100vh);
 }
 
-
+/* 카운터 숫자박스 */
 .counter_box {
     display: flex;
     position: sticky;
@@ -350,6 +350,7 @@ header {
     margin-top: 100px;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
 }
 /* 글자설정 */
 .cbtxt {
