@@ -37,7 +37,7 @@ $(() => {
     // 스크롤 위치 확인
     $(window).scroll(function () {
         scTop = $(this).scrollTop();
-        console.log(scTop);
+        // console.log(scTop);
 
         if (scTop < 1100) {
             cbnum.removeClass("non");
@@ -195,7 +195,7 @@ $(() => {
             /*********************************************** 
             3. 페이지 가로값에 곱하여 스크롤 이동하기 
         ***********************************************/
-
+            
             // 스크롤 이동
             $("html,body")
                 .stop()
@@ -203,7 +203,7 @@ $(() => {
                     {
                         scrollTop: subele.eq(subnum).offset().top - gap + "px",
                     },
-                    300,
+                    100,
                     easing_sc
                 );
             /**************************************** 
@@ -224,9 +224,7 @@ $(() => {
 
             console.log("셋팅값:", subnum);
             console.log("서브페이지위치::", subele[subnum]);
-
-            // if(scTop < tg && stopSts) e.preventDefault();
-
+            console.log("멈춤상태:", stopSts);
         }); //// mousewheel /////
     } // actWheel //
 }); ////// jQB ///////
