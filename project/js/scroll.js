@@ -119,17 +119,18 @@ $(() => {
             cbir.eq(19).addClass("cbirn");
         }
 
-            // if (scTop > tg && !stopSts) {
-            //     stopSts = 1; // 잠금!
-            //     console.log("휠호출!");
-            //     $("html,body").animate(
-            //         {
-            //             scrollTop: $(".itpg2_box").eq(0).offset().top + "px",
-            //         },
-            //         400
-            //     );
-            //     setTimeout(actWheel, 400);
-            // }
+
+            if (scTop > tg && !stopSts) {
+                stopSts = 1; // 잠금!
+                console.log("휠호출!");
+                $("html,body").animate(
+                    {
+                        scrollTop: $(".itpg2_box").eq(0).offset().top + "px",
+                    },
+                    400
+                );
+                setTimeout(actWheel, 400);
+            }
 
     }); // scroll
 
@@ -162,6 +163,7 @@ $(() => {
 
     let tg = Math.floor($(".tg").offset().top);
     console.log("타겟위치:", tg);
+    const ptg = 1900;
 
     let protSts = 0;
     let tgH = $(".itpg2_box").height();
