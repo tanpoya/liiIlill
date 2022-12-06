@@ -123,12 +123,12 @@ $(() => {
             if (scTop > tg && !stopSts) {
                 stopSts = 1; // 잠금!
                 console.log("휠호출!");
-                $("html,body").animate(
-                    {
-                        scrollTop: $(".itpg2_box").eq(0).offset().top + "px",
-                    },
-                    400
-                );
+                // $("html,body").animate(
+                //     {
+                //         scrollTop: $(".itpg2_box").eq(0).offset().top + "px",
+                //     },
+                //     400
+                // );
                 setTimeout(actWheel, 400);
             }
 
@@ -163,7 +163,6 @@ $(() => {
 
     let tg = Math.floor($(".tg").offset().top);
     console.log("타겟위치:", tg);
-    const ptg = 1900;
 
     let protSts = 0;
     let tgH = $(".itpg2_box").height();
@@ -224,13 +223,11 @@ $(() => {
             } //////// else /// //////////
 
             console.log("셋팅값:", subnum);
+            console.log("서브페이지위치::", subele[subnum]);
 
             // if(scTop < tg && stopSts) e.preventDefault();
 
         }); //// mousewheel /////
-        
-        if(subnum === 0 && stopSts === 0) return;
-
     } // actWheel //
 }); ////// jQB ///////
 
