@@ -164,6 +164,7 @@ $(() => {
     let tg = Math.floor($(".tg").offset().top);
     console.log("타겟위치:", tg);
 
+    // 휠중접 막기
     let protSts = 0;
     let tgH = $(".itpg2_box").height();
     console.log("타겟높이값:", tgH);
@@ -245,7 +246,7 @@ $(() => {
     3. 1번 문제 해결시 2번문제처럼 첫 서브페이지에서 나가지 못하고
     다시 0번으로 돌아갈 수 있음
 
-    4. 
+    4. 0번째로 갈때 한번 더 휠함수 호출해서 그런가?
 
 
 */
