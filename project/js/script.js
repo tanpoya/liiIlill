@@ -45,7 +45,7 @@ $(() => {
     // console.log(rimg);
 
     const fadeImg = () => {
-        console.log("들어옴~!");
+        // console.log("들어옴~!");
         $(rimg[2]).delay(1500).fadeOut(2000, function () {
 
                 $(rimg[1]).delay(1500).fadeOut(2000, function () {

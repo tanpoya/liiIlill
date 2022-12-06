@@ -37,7 +37,7 @@ $(() => {
     // 스크롤 위치 확인
     $(window).scroll(function () {
         scTop = $(this).scrollTop();
-        // console.log(scTop);
+        console.log(scTop);
 
         if (scTop < 1100) {
             cbnum.removeClass("non");
@@ -119,19 +119,17 @@ $(() => {
             cbir.eq(19).addClass("cbirn");
         }
 
-        if (scTop > tg && !stopSts) {
-            stopSts = 1; // 잠금!
-            console.log("휠호출!");
-            $("html,body").animate(
-                {
-                    scrollTop: $(".itpg2_box").eq(0).offset().top + "px",
-                },
-                400
-            );
-            setTimeout(actWheel, 400);
-        } else if(scTop < tg && stopSts) {
-            stopSts = 0;
-        }
+            // if (scTop > tg && !stopSts) {
+            //     stopSts = 1; // 잠금!
+            //     console.log("휠호출!");
+            //     $("html,body").animate(
+            //         {
+            //             scrollTop: $(".itpg2_box").eq(0).offset().top + "px",
+            //         },
+            //         400
+            //     );
+            //     setTimeout(actWheel, 400);
+            // }
 
     }); // scroll
 
@@ -207,7 +205,6 @@ $(() => {
                     300,
                     easing_sc
                 );
-
             /**************************************** 
             2. 방향에 따른 페이지번호 증감하기
         ****************************************/
@@ -218,7 +215,7 @@ $(() => {
             } ////////// if ///////////
             else if (delta > 0) {
                 subnum--;
-                if (subnum < 0){ 
+                if (subnum < 0){
                     stopSts = 0;//잠금해제
                     subnum = 0;
                 }
@@ -226,7 +223,12 @@ $(() => {
 
             console.log("셋팅값:", subnum);
 
+            // if(scTop < tg && stopSts) e.preventDefault();
+
         }); //// mousewheel /////
+        
+        if(subnum === 0 && stopSts === 0) return;
+
     } // actWheel //
 }); ////// jQB ///////
 
@@ -245,6 +247,8 @@ $(() => {
     
     3. 1번 문제 해결시 2번문제처럼 첫 서브페이지에서 나가지 못하고
     다시 0번으로 돌아갈 수 있음
+
+    4. 
 
 
 */
