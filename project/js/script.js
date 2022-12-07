@@ -35,6 +35,27 @@ $(() => {
         lastSc = st;
     }
 
+    $(".nbtn a").click(function (e) {
+        e.preventDefault();
+
+        let x = $(this).attr("href");
+        // console.log(x);
+
+        let pos = $(x).offset().top;
+        // offset().top - top 위치값 리턴
+        // console.log("id 위치:", pos);
+
+        $("html, body").animate(
+            {
+                scrollTop: pos + "px",
+            },
+            0,
+            "easeOutQuart"
+        );
+    });
+
+
+
     // startSS();
 
     const rimg = $(".rimg");
