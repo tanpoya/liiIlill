@@ -195,6 +195,9 @@ $(() => {
             if (delta < 0) {
                 subnum++;
                 if (subnum >= subele.length) subnum = subele.length - 1;
+                if(!subnum && delta < 0 && !stopSts) {
+                    return actWheel();
+                }
             } ////////// if ///////////
             else if (delta > 0) {
                 subnum--;
@@ -203,6 +206,10 @@ $(() => {
                     subnum = 0;
                 }
             } //////// else /// //////////
+
+            if(subnum === subele.length - 1 && delta < 0 && stopSts) {
+                stopSts = 0;
+            }
 
             console.log("셋팅값:", subnum);
             console.log("서브페이지위치::", subele[subnum]);
