@@ -638,6 +638,11 @@ footer {
     position: absolute;
     bottom: 0;
 }
+.fbox {
+    display: flex;
+}
+
+/* 왼쪽 */
 .fbs1 {
     display: flex;
     width: 300px;
@@ -645,7 +650,6 @@ footer {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    position: absolute;
 }
 .fbs1_f1 {
     display: flex;
@@ -664,3 +668,5 @@ footer {
     text-decoration: none;
     color: inherit;
 }
+
+/* 오른쪽 */
