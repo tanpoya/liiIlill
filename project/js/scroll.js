@@ -100,8 +100,8 @@ $(() => {
             cbir.eq(19).addClass("cbirn");
         }
 
-
-            if (scTop > tg && !stopSts) {
+            const a = 1; // 스크롤 휠 이벤트 잠금
+            if (scTop > tg && !stopSts && !a) {
                 stopSts = 1; // 잠금!
                 console.log("휠호출!");
                 // $("html,body").animate(
