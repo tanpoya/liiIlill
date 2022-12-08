@@ -622,3 +622,20 @@ header {
 .i2b_cb9 {
     position: static;
 }
+
+/* 하단페이지 */
+footer {
+    background-color: black;
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.footer_box {
+    color: #b8b8b8;
+    padding: 3.125vw;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+
+}
