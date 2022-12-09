@@ -479,7 +479,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     /* 중앙설정 */
-    z-index: 999;
+    /* z-index: 999; */
 }
 .watch_box img {
     width: 640px;
