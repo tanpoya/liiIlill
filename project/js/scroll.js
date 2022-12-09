@@ -15,8 +15,6 @@ $(() => {
 
     // console.log(cbnum)
 
-    let itpg2_box = $(".itpg2_box");
-
     // 스크롤 위치 확인
     $(window).scroll(function () {
         scTop = $(this).scrollTop();
@@ -117,15 +115,17 @@ $(() => {
         // 휠중접 막기
         let protSts = 0;
 
-        if (scTop >= 1800) {
+        const a = 1;
+        if (scTop >= 1800 && !a) {
             $(".page_home").on("mousewheel wheel", function (e) {
                 stopSts = 1;
 
                 if (stopSts) e.preventDefault();
 
                 if (protSts) return;
+
                 protSts = 1;
-                setTimeout(() => (protSts = 0), 1000);
+                setTimeout(() => (protSts = 0), 2000);
 
                 // e 이벤트 전달변수 처리하기
                 e = window.event || e;
@@ -159,17 +159,39 @@ $(() => {
                 2. 방향에 따른 페이지번호 증감하기
                 ****************************************/
 
-                // 셋팅값 방향에 따른 변경
-                if (delta < 0 && !stopSts) {
-                    console.log("막는중");
-                } ////////// if ///////////
-                else if (delta > 0 && stopSts) {
-                    console.log("풀기");
-                    $(".page_home").off("mousewheel wheel");
-                } //////// else /// //////////
+                // const options = {
+                //     root: null, // viewport
+                //     rootMargin: "0px",
+                //     threshold: 1.0,  // 50%가 viewport에 들어와 있어야 callback 실행
+                //   }
+                  
+                //   const observer = new IntersectionObserver(entries => {
+                //     entries.forEach(entry => {
+                //       if (entry.isIntersecting) {
+                //         entry.target.classList.add('active');
+                //       } else {
+                //         entry.target.classList.remove('active');
+                //       }
+                //     });
+                //   }, options);
+                  
+                //   // 반복문을 돌려 모든 DOM에 적용
+                //   subele.forEach(el => observer.observe(el));
+                
 
+                for (let i = 0; i < subele.length; i++) {
+                    // 셋팅값 방향에 따른 변경
+                    if (delta < 0 && !stopSts) {
+                        $(subele[i]).css({
+                            trnasform: "translate"
+                        })
+                        console.log("1");
+                    } else if (delta > 0 && stopSts) {
+
+                        // if ("") $(".page_home").off("mousewheel wheel");
+                    }
+                }
             }); //// mousewheel /////
         } // if
     }); // scroll
-
 }); ////// jQB ///////
