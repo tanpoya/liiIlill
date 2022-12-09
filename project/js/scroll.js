@@ -18,7 +18,7 @@ $(() => {
     // 스크롤 위치 확인
     $(window).scroll(function () {
         scTop = $(this).scrollTop();
-        // console.log(scTop);
+        console.log(scTop);
 
         if (scTop < 1000) {
             cbnum.removeClass("non");
@@ -103,95 +103,94 @@ $(() => {
         // 5. 스크롤 이징
         const easing_sc = "easeOutQuint";
 
-        // 6. 멈춤 상태값 : 전체 스크롤 멈춤
-        let stopSts = 0; //0-허용,1-멈춤
-
         // 8. 서브요소
         let subele = $(".itpg2_box");
 
         // 9. 보정값(7vh값으로 계산)
         let gap = $(window).height() * 0.07;
 
-        // 휠중접 막기
-        let protSts = 0;
-
-        const a = 1;
-        if (scTop >= 1800 && !a) {
-            $(".page_home").on("mousewheel wheel", function (e) {
-                stopSts = 1;
-
-                if (stopSts) e.preventDefault();
-
-                if (protSts) return;
-
-                protSts = 1;
-                setTimeout(() => (protSts = 0), 2000);
-
-                // e 이벤트 전달변수 처리하기
-                e = window.event || e;
-
-                /******************************* 
-            1. 마우스 휠 방향 알아내기!
-            *******************************/
-                let delta = e.wheelDelta || e.detail;
-                //    /firefox/i.test(navigator.userAgent));
-                // 파이어폭스 브라우저이면 델타값 부호를 반대로 한다!
-                if (/firefox/i.test(navigator.userAgent)) {
-                    delta = -delta; // 변수앞에 마이너스는 부호반대
-                } ////////////// if ////////////////////////
-
-                /*********************************************** 
-                3. 페이지 가로값에 곱하여 스크롤 이동하기 
-                ***********************************************/
-
-                // 스크롤 이동
-                // $("html,body")
-                //     .stop()
-                //     .animate(
-                //         {
-                //             scrollTop: subele.eq(subnum).offset().top - gap + "px",
-                //         },
-                //         100,
-                //         easing_sc
-                //     );
-
-                /**************************************** 
-                2. 방향에 따른 페이지번호 증감하기
-                ****************************************/
-
-                // const options = {
-                //     root: null, // viewport
-                //     rootMargin: "0px",
-                //     threshold: 1.0,  // 50%가 viewport에 들어와 있어야 callback 실행
-                //   }
-                  
-                //   const observer = new IntersectionObserver(entries => {
-                //     entries.forEach(entry => {
-                //       if (entry.isIntersecting) {
-                //         entry.target.classList.add('active');
-                //       } else {
-                //         entry.target.classList.remove('active');
-                //       }
-                //     });
-                //   }, options);
-                  
-                //   // 반복문을 돌려 모든 DOM에 적용
-                //   subele.forEach(el => observer.observe(el));
-                
-
-                for (let i = 0; i < subele.length; i++) {
-                    // 셋팅값 방향에 따른 변경
-                    if (delta < 0 && !stopSts) {
-                        $(subele[i]).css({
-                            trnasform: "translate"
-                        })
-                        console.log("1");
-                    } else if (delta > 0 && stopSts) {
-
-                        // if ("") $(".page_home").off("mousewheel wheel");
-                    }
-                }
-            }); //// mousewheel /////
+        // const a = 1;
+        if (scTop >= 1800) {
+            scAct();
         } // if
     }); // scroll
+
+    // 스크롤 한계값 => 페이지전체길이 - 화면height크기
+    let limit = $(document).height() - $(window).height();
+    console.log("스크롤한계값:", limit);
+
+    // 아이템 페이지 순번
+    let itnum = 0;
+
+    // 6. 멈춤 상태값 : 전체 스크롤 멈춤
+    let stopSts = 0; //0-허용,1-멈춤
+
+    // 휠중접 막기
+    let protSts = 0;
+
+    // 아이템 페이지 개수
+    let itcnt = $(".itpg2_box").length;
+    console.log("아이템개수:", itcnt);
+
+    function scAct() {
+        $(".page_home").on("mousewheel wheel", function (e) {
+            // e 이벤트 전달변수 처리하기
+            e = window.event || e;
+
+            /******************************* 
+                1. 마우스 휠 방향 알아내기!
+                *******************************/
+            let delta = e.wheelDelta || e.detail;
+            //    /firefox/i.test(navigator.userAgent));
+            // 파이어폭스 브라우저이면 델타값 부호를 반대로 한다!
+            if (/firefox/i.test(navigator.userAgent)) {
+                delta = -delta; // 변수앞에 마이너스는 부호반대
+            } ////////////// if ////////////////////////
+
+            // 스크롤 한계값이상이고 스크롤이 아랫방향이면...
+            if (scTop >= limit) {
+                if (stopSts) e.preventDefault();
+                else $(this).unbind("mousewheel wheel");
+
+                stopSts = 1;
+
+                if (protSts) return;
+                protSts = 1;
+                setTimeout(() => (protSts = 0), 600);
+
+                console.log("작동이야~~!", itnum);
+
+                // 스크롤 내릴때 ///////
+                if (delta < 0) {
+                    $(".itpg2_box").eq(itnum).animate({ top: "-100%" }, 600);
+                    itnum++;
+                    if (itnum > itcnt) itnum = itcnt;
+
+                    if (itnum == 10) {
+                        $("footer").animate({ top: "50%" }, 400);
+                        $(".itpgWrap").animate({ top: "50%" }, 400);
+                    }
+
+                } 
+                // 스크롤 올릴때 ///////
+                else {
+                    $(".itpg2_box").eq(itnum).animate({ top: "0" }, 600);
+                    itnum--;
+                    if (itnum < -1) itnum = 0;
+
+                    
+                    if (itnum <= 9) {
+                        $("footer").animate({ top: "100%" }, 400);
+                        $(".itpgWrap").animate({ top: "100%" }, 400);
+                    }
+
+
+                    if(itnum <= 0){
+                        stopSts = 0;// 스크롤잠금해제!
+                    }
+                    console.log("스크롤잠금",stopSts);
+                }
+            }
+        }); //// mousewheel /////
+    }
 }); ////// jQB ///////
