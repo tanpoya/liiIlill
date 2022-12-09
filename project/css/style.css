@@ -394,12 +394,14 @@ header {
 /* 10 위치 1900 */
 /* 이후 나옴 */
 .itpg2 {
-    height: 100%;
+    height: 1000px;
+    position: relative;
 }
 .itpg2_box {
     width: 100%;
     height: 100%;
     margin: 7vh 0;
+    position: absolute;
 }
 .i2b {
     color: #fff;
@@ -681,3 +683,11 @@ footer {
 .fbspan span {
     display: block;
 }
+
+
+
+
+
+/* .itpg2_box:first-child {
+    top: -900px;
+} */
