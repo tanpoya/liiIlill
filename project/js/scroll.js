@@ -102,94 +102,74 @@ $(() => {
             cbir.eq(19).addClass("cbirn");
         }
 
-        
+        // 5. 스크롤 이징
+        const easing_sc = "easeOutQuint";
 
+        // 6. 멈춤 상태값 : 전체 스크롤 멈춤
+        let stopSts = 0; //0-허용,1-멈춤
 
+        // 8. 서브요소
+        let subele = $(".itpg2_box");
 
+        // 9. 보정값(7vh값으로 계산)
+        let gap = $(window).height() * 0.07;
 
+        // 휠중접 막기
+        let protSts = 0;
 
+        if (scTop >= 1800) {
+            $(".page_home").on("mousewheel wheel", function (e) {
+                stopSts = 1;
 
+                if (stopSts) e.preventDefault();
 
-    }); // scroll
+                if (protSts) return;
+                protSts = 1;
+                setTimeout(() => (protSts = 0), 40);
 
+                // e 이벤트 전달변수 처리하기
+                e = window.event || e;
 
-    // 5. 스크롤 이징
-    const easing_sc = "easeOutQuint";
-
-    // 6. 멈춤 상태값 : 전체 스크롤 멈춤
-    let stopSts = 0; //0-허용,1-멈춤
-
-    // 8. 서브요소
-    let subele = $(".itpg2_box");
-
-    // 9. 보정값(7vh값으로 계산)
-    let gap = $(window).height() * 0.07;
-
-    // 휠중접 막기
-    let protSts = 0;
-
-        $(".page_home").on("mousewheel wheel", function (e) {
-
-            stopSts = 1;
-            
-            if(stopSts) e.preventDefault();
-
-            if (protSts) return;
-            protSts = 1;
-            setTimeout(() => (protSts = 0), 40);
-
-            // e 이벤트 전달변수 처리하기
-            e = window.event || e;
-
-            /******************************* 
+                /******************************* 
             1. 마우스 휠 방향 알아내기!
             *******************************/
-            let delta = e.wheelDelta || e.detail;
-            //    /firefox/i.test(navigator.userAgent));
-            // 파이어폭스 브라우저이면 델타값 부호를 반대로 한다!
-            if (/firefox/i.test(navigator.userAgent)) {
-                delta = -delta; // 변수앞에 마이너스는 부호반대
-            } ////////////// if ////////////////////////
+                let delta = e.wheelDelta || e.detail;
+                //    /firefox/i.test(navigator.userAgent));
+                // 파이어폭스 브라우저이면 델타값 부호를 반대로 한다!
+                if (/firefox/i.test(navigator.userAgent)) {
+                    delta = -delta; // 변수앞에 마이너스는 부호반대
+                } ////////////// if ////////////////////////
 
-            /*********************************************** 
-            3. 페이지 가로값에 곱하여 스크롤 이동하기 
-            ***********************************************/
-            
-            // 스크롤 이동
-            $("html,body")
-                .stop()
-                .animate(
-                    {
-                        scrollTop: subele.eq(subnum).offset().top - gap + "px",
-                    },
-                    100,
-                    easing_sc
-                );
-            /**************************************** 
-            2. 방향에 따른 페이지번호 증감하기
-            ****************************************/
-            // 셋팅값 방향에 따른 변경
-            if (delta < 0) {
-                subnum++;
-                if (subnum >= subele.length) subnum = subele.length - 1;
-                if(!subnum && delta < 0 && !stopSts) {
-                    return actWheel();
-                }
-            } ////////// if ///////////
-            else if (delta > 0) {
-                subnum--;
-                if (subnum < 0){
-                    stopSts = 0;//잠금해제
-                    subnum = 0;
-                }
-            } //////// else /// //////////
+                /*********************************************** 
+                3. 페이지 가로값에 곱하여 스크롤 이동하기 
+                ***********************************************/
 
-            if(subnum === subele.length - 1 && delta < 0 && stopSts) {
-                stopSts = 0;
-            }
+                // 스크롤 이동
+                // $("html,body")
+                //     .stop()
+                //     .animate(
+                //         {
+                //             scrollTop: subele.eq(subnum).offset().top - gap + "px",
+                //         },
+                //         100,
+                //         easing_sc
+                //     );
 
-            console.log("셋팅값:", subnum);
-            console.log("서브페이지위치::", subele[subnum]);
-            console.log("멈춤상태:", stopSts);
-        }); //// mousewheel /////
+                /**************************************** 
+                2. 방향에 따른 페이지번호 증감하기
+                ****************************************/
+
+                // 셋팅값 방향에 따른 변경
+                if (delta < 0) {
+
+                } ////////// if ///////////
+                else if (delta > 0 && stopSts) {
+                    console.log("휠이벤트 풀기");
+                    $(".page_home").off("mousewheel wheel");
+                } //////// else /// //////////
+
+            }); //// mousewheel /////
+        } // if
+    }); // scroll
+
 }); ////// jQB ///////
