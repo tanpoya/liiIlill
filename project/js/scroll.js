@@ -125,7 +125,7 @@ $(() => {
 
                 if (protSts) return;
                 protSts = 1;
-                setTimeout(() => (protSts = 0), 40);
+                setTimeout(() => (protSts = 0), 1000);
 
                 // e 이벤트 전달변수 처리하기
                 e = window.event || e;
@@ -160,11 +160,11 @@ $(() => {
                 ****************************************/
 
                 // 셋팅값 방향에 따른 변경
-                if (delta < 0) {
-
+                if (delta < 0 && !stopSts) {
+                    console.log("막는중");
                 } ////////// if ///////////
                 else if (delta > 0 && stopSts) {
-                    console.log("휠이벤트 풀기");
+                    console.log("풀기");
                     $(".page_home").off("mousewheel wheel");
                 } //////// else /// //////////
 
