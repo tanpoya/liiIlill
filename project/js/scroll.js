@@ -18,7 +18,7 @@ $(() => {
     // 스크롤 위치 확인
     $(window).scroll(function () {
         scTop = $(this).scrollTop();
-        console.log(scTop);
+        // console.log(scTop);
 
         if (scTop < 1000) {
             cbnum.removeClass("non");
@@ -150,7 +150,7 @@ $(() => {
             // 스크롤 한계값이상이고 스크롤이 아랫방향이면...
             if (scTop >= limit) {
                 if (stopSts) e.preventDefault();
-                else $(this).unbind("mousewheel wheel");
+                // else $(this).unbind("mousewheel wheel");
 
                 stopSts = 1;
 
@@ -164,31 +164,31 @@ $(() => {
                 if (delta < 0) {
                     $(".itpg2_box").eq(itnum).animate({ top: "-100%" }, 600);
                     itnum++;
-                    if (itnum > itcnt) itnum = itcnt;
+                    if (itnum > itcnt) itnum = itcnt + 1; // itnum => 0 itcnt => 9
 
-                    if (itnum == 10) {
+                    if (itnum >= 11) {
                         $("footer").animate({ top: "50%" }, 400);
                         $(".itpgWrap").animate({ top: "50%" }, 400);
                     }
-
-                } 
+                }
                 // 스크롤 올릴때 ///////
                 else {
                     $(".itpg2_box").eq(itnum).animate({ top: "0" }, 600);
                     itnum--;
-                    if (itnum < -1) itnum = 0;
+                    if (itnum < 0) {
+                        itnum = 0;
+                        $(this).unbind("mousewheel wheel");
+                    }
 
-                    
                     if (itnum <= 9) {
                         $("footer").animate({ top: "100%" }, 400);
                         $(".itpgWrap").animate({ top: "100%" }, 400);
                     }
 
-
-                    if(itnum <= 0){
-                        stopSts = 0;// 스크롤잠금해제!
+                    if (itnum <= 0) {
+                        stopSts = 0; // 스크롤잠금해제!
                     }
-                    console.log("스크롤잠금",stopSts);
+                    console.log("스크롤잠금", stopSts);
                 }
             }
         }); //// mousewheel /////

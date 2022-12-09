@@ -359,6 +359,7 @@ header {
     line-height: 1em;
     text-transform: uppercase;
     /* letter-spacing: -1px; */
+    pointer-events: none;
 }
 
 .counter_boxI {
@@ -386,6 +387,7 @@ header {
     display: none;
     /* overflow: hidden; */
     /* opacity: 0; */
+    pointer-events: none;
 }
 .non {
     display: block;
