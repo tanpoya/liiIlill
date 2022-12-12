@@ -37,9 +37,9 @@ $(() => {
 
 
 
-    const ham = $(".ham");
-    $(ham).click(()=> {
-        $(ham).toggleClass("hon");
+    // const ham = $(".ham");
+    $(".ham").click(function() { // this를 사용할때는 화살표함수 사용 ㄴㄴ(이걸 까먹고 있었네..)
+        $(this).toggleClass("hon");
     });
 
 
