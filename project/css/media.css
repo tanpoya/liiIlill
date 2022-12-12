@@ -94,4 +94,13 @@
         display: flex;
         align-items: center;
     }
+
+    .cbox {
+        width: 110vw;
+    }
+    @keyframes acani {
+        to {
+            left: -110vw;
+        }
+    }
 }
