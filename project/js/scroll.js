@@ -162,7 +162,8 @@ $(() => {
 
                 // 스크롤 내릴때 ///////
                 if (delta < 0) {
-                    $(".itpg2_box").eq(itnum).animate({ top: "-100%" }, 600);
+                    $(".itpg2_box").eq(itnum).animate({ top: "-100%"}, 600);
+                    // $(".itpg2_box").eq(itnum).animate({ top: "-50vw" }, 600);
                     itnum++;
                     if (itnum > itcnt) itnum = itcnt + 1; // itnum => 0 itcnt => 9
 
