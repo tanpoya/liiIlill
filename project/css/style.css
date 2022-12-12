@@ -108,15 +108,23 @@ header {
 }
 .smenu>ol {
     padding-top: 5px;
-    background-color: #fff;
+    background-color: #b8b8b8;
 }
 .smenu>ol>li a {
     display: block;
     padding: 10px 0;
 }
 
+.gnb_li:hover .gla {
+    font-weight: bold;
+    background-color: #999;
+}
+.smenu li:hover {
+    background-color: #999;
+    font-weight: bold;
+}
 .gnb_li:hover .smenu {
-    height: 100%;
+    height: 128px;
 }
 
 
