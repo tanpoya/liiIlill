@@ -36,10 +36,12 @@ $(() => {
     }
 
 
+
     const ham = $(".ham");
     $(ham).click(()=> {
         $(ham).toggleClass("hon");
-    })
+    });
+
 
     $(".nbtn a").click(function (e) {
         e.preventDefault();
