@@ -44,6 +44,7 @@ header {
     left: 50%;
     z-index: 9999;
     transition: top .2s ease-in-out;
+    background-color: #0000003b;
 }
 .nav-up {
     top: -70px;
@@ -140,7 +141,7 @@ header {
     position: absolute;
     width: 630px;
     height: 70px;
-    background-color: #b8b8b8;
+    /* background-color: #b8b8b8; */
     left: 43%;
     transform: translateX(-50%);
     top: 0;
@@ -183,7 +184,8 @@ header {
 
 .gnb_li:hover .gla {
     font-weight: bold;
-    background-color: #999;
+    background-color: #302e2e2f;
+    color: white;
 }
 .smenu li:hover {
     background-color: #999;
