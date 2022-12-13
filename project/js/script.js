@@ -29,18 +29,54 @@ $(() => {
 
         if (st > lastSc && st > navbarHeight) {
             $("header").removeClass("nav-down").addClass("nav-up");
+
+                setTimeout(() => {
+                    $(".gnb-nav, .ham").removeClass("hon");
+                }, 250);
+                Hoff();
+
         } else {
             $("header").removeClass("nav-up").addClass("nav-down");
         }
         lastSc = st;
     }
 
-
+    let honS = 0;
 
     // const ham = $(".ham");
-    $(".ham").click(function() { // this를 사용할때는 화살표함수 사용 ㄴㄴ(이걸 까먹고 있었네..)
+    $(".ham").click(function() { // this를 사용할때는 화살표함수 사용 ㄴㄴ
+        
+        if(honS) return;
+        honS = 1;
+        setTimeout(() => (honS = 0), 500);
+
         $(this).toggleClass("hon");
+        $(".gnb-nav").toggleClass("hon");
+        
+        if($(".gnb-nav").hasClass("hon")) {
+            Hon();
+        } else {
+            Hoff();
+        }
     });
+    
+
+    const Hon = function() {
+        setTimeout(() => {
+            $(".gnb_ul").css({
+                left: "0",
+                transition: "left 1s"
+            })
+        }, 200);
+    }
+
+    const Hoff = function() {
+        setTimeout(() => {
+            $(".gnb_ul").css({
+                left: "-50%"
+            })
+        }, 0);
+    }
 
 
     $(".nbtn a").click(function (e) {

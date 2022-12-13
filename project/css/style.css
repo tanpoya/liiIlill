@@ -69,6 +69,9 @@ header {
 .nbtn{
     margin-left: 40px;
 }
+.nbtn:first-child {
+    margin: 0;
+}
 .tnav {
     /* position: relative; */
     font-size: 20px;
@@ -117,24 +120,39 @@ header {
 
 .gnb-nav {
     position: relative;
-    width: 85vw;
+    /* width: 86vw; */
+    width: 0;
     height: 100%;
     right: 5%;
+    overflow: hidden;
+    transition: width .4s;
 }
+.gnb-nav.hon {
+    width: 80vw;
+    overflow: visible;
+}
+/* .gnb-nav.hon .gnb_ul {
+    left: 0;
+} */
+
+
 .gnb {
     position: absolute;
     width: 630px;
     height: 70px;
     background-color: #b8b8b8;
-    left: 50%;
+    left: 43%;
     transform: translateX(-50%);
     top: 0;
+    /* padding-right: 88px; */
 }
 .gnb_ul {
     display: flex;
     justify-content: space-around;
-    position: relative;
+    position: absolute;
     text-align: center;
+    width: 100%;
+    left: -50%;
 }
 .gnb_li {
     width: 100%;
