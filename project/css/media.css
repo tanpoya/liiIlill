@@ -1,4 +1,10 @@
 @charset "utf-8";
+/* https://www.walterz.net/2017/07/25/jquery-%EB%AF%B8%EB%94%94%EC%96%B4-%EC%BF%BC%EB%A6%AC-%EB%B0%98%EC%9D%91%ED%98%95-%EC%9B%B9-%EA%B0%9C%EB%B0%9C/ */
+#m-360 {
+    display: none;
+    height: 0;
+    overflow: hidden;
+}
 
 @media (max-width: 1370px) {
     .gnb {
@@ -33,6 +39,9 @@
 }
 
 @media (max-width: 1168px) {
+    .gnb {
+        left: 30%;
+    }
     .bbox:first-child {
         font-size: 12px;
     }
@@ -104,3 +113,51 @@
         }
     }
 }
+
+@media (max-width: 500px) {
+    body {
+        padding-top: 70px;
+    }
+    header {
+        /* position: relative; */
+        width: 100%;
+        background-color: gray;
+        transition: none;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+    .ham {
+        right: 10px;
+    }
+
+    /* 메인컨텐츠 */
+
+    /* h1 */
+    .sin {
+        width: 100%;
+    }
+    .sin_s {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        line-height: 53px;
+    }
+
+    /* h1 밑 사진 */
+    .intro_icon_box {
+        margin-top: 30px;
+    }
+    .intro_icon img {
+        width: 100px;
+    }
+}
+
+
+
+
+/* _______________________________________ */
+
+/* @media all and (max-width: 360px) {
+    #m-360 {
+        display: block;
+    }
+} */

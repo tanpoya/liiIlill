@@ -21,13 +21,28 @@ $(() => {
         }
     }, 250);
 
+
+    // 미디어쿼리 모바일 전환 js 삭제
+    // 윈도우 가로 크기가 모바일 사이즈면 코드를 변경한다!
+    // 모바일일때 적용하고 싶거나 싶지않으면 mobsts값을 활용한다!
+    // 모바일일때 1, 모바일이 아닐때 0 (가로크기 500기준)
+    let mobsts = 0;
+    if ($(window).width() <= 500) mobsts = 1;
+    console.log("모바일적용여부:", mobsts);
+    
+
+
+    /* 
+        스크롤 방향에 따라 헤더 업/다운
+        햄버거버튼 접기
+    */
     function hdudS() {
         let st = $(this).scrollTop();
         // Math.abs 절대값
         // 0 - 현재위치 <= 5
-        if (Math.abs(lastSc - st) <= delta) return;
+        if (Math.abs(lastSc - st) <= delta) { console.log("abs"); return;}
 
-        if (st > lastSc && st > navbarHeight) {
+        if (st > lastSc && st > navbarHeight && mobsts === 0) {
             $("header").removeClass("nav-down").addClass("nav-up");
 
                 setTimeout(() => {
@@ -41,6 +56,7 @@ $(() => {
         lastSc = st;
     }
 
+    // 햄버거버튼 연속클릭 금지
     let honS = 0;
 
     // const ham = $(".ham");
@@ -50,16 +66,17 @@ $(() => {
         honS = 1;
         setTimeout(() => (honS = 0), 500);
 
-        $(this).toggleClass("hon");
-        $(".gnb-nav").toggleClass("hon");
-        
-        if($(".gnb-nav").hasClass("hon")) {
-            Hon();
-        } else {
-            Hoff();
+        if(mobsts === 0) {
+            $(this).toggleClass("hon");
+            $(".gnb-nav").toggleClass("hon");
+            
+            if($(".gnb-nav").hasClass("hon")) {
+                Hon();
+            } else {
+                Hoff();
+            }
         }
     });
-    
 
     const Hon = function() {
         setTimeout(() => {
