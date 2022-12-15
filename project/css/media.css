@@ -153,6 +153,19 @@
     .intro_list_tbox1 {
         font-size: 13px;
     }
+
+    .intro_list_text1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .intro_list_tbox_img {
+        width: 160px;
+        height: 200px;
+    }
+    .intro_list_tbox_img img {
+        /* width: 75%;
+        height: 75%; */
+    }
 }
 
 
