@@ -149,6 +149,10 @@
     .intro_icon img {
         width: 100px;
     }
+
+    .intro_list_text1 {
+        padding-bottom: 5px;
+    }
     
     .intro_list_tbox1 {
         font-size: 13px;
@@ -162,12 +166,21 @@
         width: 160px;
         height: 200px;
     }
-    .intro_list_tbox_img img {
-        /* width: 75%;
-        height: 75%; */
+
+    .intro_list_tbox1 {
+        line-height: 19px;
     }
+
+    .abox_iimg {
+        width: 387px;
+    }
+
+    .mabox:hover .cbox {
+        transform: translateY(-20%);
+    } /* 5 6 7 8 */
 }
 
+/* 할것: 마지막을 옆슬라이드로 바꾸기 */
 
 
 
