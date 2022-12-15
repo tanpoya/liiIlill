@@ -149,6 +149,10 @@
     .intro_icon img {
         width: 100px;
     }
+    
+    .intro_list_tbox1 {
+        font-size: 13px;
+    }
 }
 
 
