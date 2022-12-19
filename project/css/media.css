@@ -200,9 +200,13 @@
         /* outline: 1px solid blue; */
     }
     
-    .itpg2_box:nth-child(n + 2) {
+    .itpg2_box {
         display: none;
     }
+    .itpg2_box:nth-child(10) {
+        display: block;
+    }
+
     .itpg2_box {
         margin: 0;
     }
@@ -240,6 +244,24 @@
         height: 306px;
     }
 
+    .buy {
+        font-size: 20px;
+    }
+
+    /* 5개의 글자애니 */
+    .i2bi3 {
+        width: 78px;
+        height: 78px;
+    }
+    .itpg2_box:nth-child(3) .i2btb {
+        top: calc(100% - 59vh);
+    }
+    .i2btbR {
+        justify-content: space-around;
+    }
+    .itpg2_box:nth-child(9) .i2btb {
+        top: calc(100% - 59vh);
+    }
 
 
 
