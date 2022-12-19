@@ -183,6 +183,69 @@
         line-height: calc(1px * var(--h));
     }
 
+    /* counter_box */
+    .counter_box {
+        height: 42vh;
+    }
+
+    /* itpgWrap 옆으로 스크롤하게 */
+    .itpgWrap {
+        position: relative;
+        top: 0;
+        height: 100%;
+        z-index: 0;
+    }
+    .itpg2 {
+        height: 600px;
+        /* outline: 1px solid blue; */
+    }
+    
+    .itpg2_box:nth-child(n + 2) {
+        display: none;
+    }
+    .itpg2_box {
+        margin: 0;
+    }
+    .i2b {
+        height: 500px;
+        /* top: 9%; */
+    }
+    .i2b_top {
+        height: 56px;
+    }
+    .i2b_top span {
+        font-size: 15px;
+    }
+    .i2b_top span:first-of-type {
+        left: calc(100% - 80vw);
+    }
+    .i2b_top span:last-of-type {
+        right: calc(100% - 83vw);
+    }
+    .i2bimg .i2blo {
+        top: -15px;
+        width: 162px;
+        height: 78px;
+    }
+
+    .i2b_cb {
+        height: calc(100% - 143px);
+    }
+    .i2btb {
+        top: calc(100% - 7vh);
+    }
+
+    .watch_box img {
+        width: 309px;
+        height: 306px;
+    }
+
+
+
+
+    .pgWrap {
+        /* margin-bottom: 50px; */
+    }
 
 }
 
