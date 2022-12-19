@@ -5,6 +5,14 @@ $(() => {
 
     // let scTop = 0;
 
+    // 미디어쿼리 모바일 전환 js 삭제
+    // 윈도우 가로 크기가 모바일 사이즈면 코드를 변경한다!
+    // 모바일일때 적용하고 싶거나 싶지않으면 mobsts값을 활용한다!
+    // 모바일일때 1, 모바일이 아닐때 0 (가로크기 500기준)
+    let mobsts = 0;
+    if ($(window).width() <= 500) mobsts = 1;
+    console.log("모바일적용여부:", mobsts);
+
     // 스크롤 위치변수
     let scTop;
     let cbnum = $(".cbnum");
@@ -110,7 +118,7 @@ $(() => {
         let gap = $(window).height() * 0.07;
 
         // const a = 1;
-        if (scTop >= 1800) {
+        if (scTop >= 1800 && mobsts === 0) {
             scAct();
         } // if
     }); // scroll
