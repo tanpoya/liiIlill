@@ -196,8 +196,10 @@
         z-index: 0;
         transform-style: preserve-3d;
         perspective: 10000px;
+        background-color: transparent;
     }
     .itpg2 {
+        width: 290px;
         height: 600px;
         position: relative;
         transform-style: preserve-3d;
