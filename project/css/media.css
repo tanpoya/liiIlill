@@ -194,14 +194,29 @@
         top: 0;
         height: 100%;
         z-index: 0;
+        transform-style: preserve-3d;
+        perspective: 10000px;
     }
     .itpg2 {
         height: 600px;
         position: relative;
+        transform-style: preserve-3d;
+        animation: spin 20s  linear infinite;
+    }
+    @keyframes spin {
+        from {
+            transform: rotateY(0deg);
+        }
+
+        to {
+            transform: rotateY(360deg);
+        }
     }
     
     .itpg2_box {
         /* display: none; */
+        transform: rotateY(calc(36deg * var(--d))) translateZ(500px);
+        width: 290px;
     }
     .itpg2_box:nth-child(10) {
         /* display: block; */
