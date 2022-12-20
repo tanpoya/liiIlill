@@ -257,7 +257,10 @@ $(() => {
             $(edition_sw[idx]).css({
                 color: `${ele}`,
             });
-    });
+        });
+
+
+
 });
 
 // i2bColor2.forEach((e, i) => {
@@ -271,3 +274,8 @@ $(() => {
 // https://webisfree.com/2014-09-07/[jquery]-%EC%A0%88%EB%8C%80%EC%A2%8C%ED%91%9C-%EB%B0%8F-%EC%83%81%EB%8C%80%EC%A2%8C%ED%91%9C-%ED%99%95%EC%9D%B8-%EB%B0%8F-%EC%9D%B4%EB%8F%99%ED%95%98%EA%B8%B0-offset()-position()
 // let aboxImg = iimg.position().top
 // console.log(aboxImg);
+
+
+
+
+

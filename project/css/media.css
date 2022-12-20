@@ -203,7 +203,7 @@
         height: 600px;
         position: relative;
         transform-style: preserve-3d;
-        animation: spin 20s  linear infinite;
+        /* animation: spin 20s  linear infinite; */
     }
     @keyframes spin {
         from {
