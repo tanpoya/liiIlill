@@ -197,14 +197,14 @@
     }
     .itpg2 {
         height: 600px;
-        /* outline: 1px solid blue; */
+        position: relative;
     }
     
     .itpg2_box {
-        display: none;
+        /* display: none; */
     }
     .itpg2_box:nth-child(10) {
-        display: block;
+        /* display: block; */
     }
 
     .itpg2_box {
