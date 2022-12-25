@@ -262,6 +262,47 @@ $(() => {
         });
 
 
+        /* 모바일일때 버튼 눌러서 그림 넘기기 */
+
+        // 누를때마다 변수에 담기...
+        // 음..
+        // if 누를때 오른쪽으면 -36deg 왼쪽이면 +36deg <- 생각중인거
+        // 근데 어케 구현하지
+        // 일단 완료 근데 뭔가 맘에 안들어
+        // Rotate 계속 중첩됨 => 한바퀴 돌고 한번 더 오른쪽으로 이동하면 396deg됨
+        // 이건 내일하자.. 나 자신 열심히좀 하자 제발
+
+        let Rotate = 0;
+        let prot = 0;
+
+        $(".abtn").click(function() {
+            if($(this).hasClass("rbtn")) {
+                // console.log("오른쪽버튼");
+
+                if(prot) return
+                prot = 1;
+                setTimeout(()=>prot = 0, 600);
+                
+                Rotate -= 36;
+                $(".itpg2").css({
+                    transform: `rotateY(${Rotate}deg)`
+                });
+
+            } else {
+                // console.log("왼쪽버튼");
+
+                if(prot) return
+                prot = 1;
+                setTimeout(()=>prot = 0, 600);
+                
+                Rotate += 36;
+                $(".itpg2").css({
+                    transform: `rotateY(${Rotate}deg)`
+                });
+            }
+        })
+
+
 
 });
 
