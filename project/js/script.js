@@ -76,7 +76,7 @@ $(() => {
                 Hoff();
             }
         } else if(mobsts === 1) {
-            // 햄버거 버튼 누르면...
+            $(".mgnb-nav").toggleClass("mon");
         }
     });
 
@@ -270,11 +270,12 @@ $(() => {
         // 근데 어케 구현하지
         // 일단 완료 근데 뭔가 맘에 안들어
         // Rotate 계속 중첩됨 => 한바퀴 돌고 한번 더 오른쪽으로 이동하면 396deg됨
-        // 이건 내일하자.. 나 자신 열심히좀 하자 제발
 
+        let itpg2_box = $(".itpg2_box");
         let Rotate = 0;
         let prot = 0;
 
+        
         $(".abtn").click(function() {
             if($(this).hasClass("rbtn")) {
                 // console.log("오른쪽버튼");
@@ -287,7 +288,6 @@ $(() => {
                 $(".itpg2").css({
                     transform: `rotateY(${Rotate}deg)`
                 });
-
             } else {
                 // console.log("왼쪽버튼");
 
@@ -300,10 +300,8 @@ $(() => {
                     transform: `rotateY(${Rotate}deg)`
                 });
             }
+            console.log(Rotate + "도");
         })
-
-
-
 });
 
 // i2bColor2.forEach((e, i) => {

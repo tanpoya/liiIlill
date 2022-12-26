@@ -195,6 +195,10 @@ header {
     height: 128px;
 }
 
+.mgnb-nav {
+    display: none;
+}
+
 
 
 /* 메인영역 */
